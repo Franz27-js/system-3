@@ -21,10 +21,33 @@
 .dark_theme_1 .menu_container .menu_inner_container .profile_container {
   color: #EEEEEE;
 }
+.dark_theme_1 .content_container .inner_content_container {
+  background-color: #31363F;
+}
 
 .dark_theme_2 {
   background-color: #070F2B;
 }
 .dark_theme_2 .menu_container {
   border-right: 2px solid #535C91;
+}
+.dark_theme_2 .menu_container .menu_inner_container .menu_title {
+  color: #9290C3;
+}
+.dark_theme_2 .menu_container .menu_inner_container .menu_link {
+  color: #9290C3;
+}
+.dark_theme_2 .menu_container .menu_inner_container .menu_link:hover {
+  color: #F6B17A;
+  background-color: #535C91;
+}
+.dark_theme_2 .menu_container .menu_inner_container .menu_link_active {
+  background-color: #535C91;
+  color: #F6B17A;
+}
+.dark_theme_2 .menu_container .menu_inner_container .profile_container {
+  color: #9290C3;
+}
+.dark_theme_2 .content_container .inner_content_container {
+  background-color: #1B1A55;
 }/*# sourceMappingURL=themes.css.map */

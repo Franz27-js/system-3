@@ -41,6 +41,12 @@ $accent_color_2: #F6B17A;
       }
     }
   }
+
+  .content_container {
+    .inner_content_container {
+      background-color: $dark_color_1;
+    }
+  }
 }
 
 .dark_theme_2 {
@@ -48,5 +54,35 @@ $accent_color_2: #F6B17A;
   
   .menu_container {
     border-right: 2px solid $middle_color_2;
+
+    .menu_inner_container {
+      .menu_title {
+        color: $light_color_2;
+      }
+
+      .menu_link {
+        color: $light_color_2;
+
+        &:hover {
+          color: $accent_color_2;
+          background-color: $middle_color_2;
+        }
+      }
+
+      .menu_link_active {
+        background-color: $middle_color_2;
+        color: $accent_color_2;
+      }
+
+      .profile_container {
+        color: $light_color_2;
+      }
+    }
+  }
+
+  .content_container {
+    .inner_content_container {
+      background-color: $dark_color_2;
+    }
   }
 }

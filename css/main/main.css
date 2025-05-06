@@ -83,4 +83,27 @@ html body .main_container .menu_container .menu_inner_container .profile_contain
 html body .main_container .content_container {
   width: 85%;
   height: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+html body .main_container .content_container .content_column {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+}
+html body .main_container .content_container .content_column .inner_content_container {
+  height: 350px;
+  width: 100%;
+  border-radius: 15px;
+}
+html body .main_container .content_container .content_column .inner_content_25 {
+  width: 25%;
+}
+html body .main_container .content_container .content_column .inner_content_50 {
+  width: 50%;
+}
+html body .main_container .content_container .content_column .inner_content_75 {
+  width: 75%;
 }/*# sourceMappingURL=main.css.map */
