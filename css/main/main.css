@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Exa", sans-serif;
+}
+html body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html body .main_container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+html body .main_container .menu_container {
+  width: 15%;
+  height: 100%;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+html body .main_container .menu_container .menu_inner_container {
+  display: flex;
+  flex-direction: column;
+}
+html body .main_container .menu_container .menu_inner_container .menu_title {
+  width: 100%;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .main_container .menu_container .menu_inner_container .menu_link {
+  width: 100%;
+  padding: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+html body .main_container .menu_container .menu_inner_container .menu_link .menu_link_icon {
+  height: 25px;
+  width: 25px;
+}
+html body .main_container .menu_container .menu_inner_container .profile_container {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+html body .main_container .menu_container .menu_inner_container .profile_container .user_icon_container {
+  position: relative;
+}
+html body .main_container .menu_container .menu_inner_container .profile_container .user_icon_container .user_profile_icon {
+  height: 55px;
+  width: 55px;
+}
+html body .main_container .menu_container .menu_inner_container .profile_container .user_icon_container .__user_identifier__ {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #57a32b;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+html body .main_container .content_container {
+  width: 85%;
+  height: 100%;
+}/*# sourceMappingURL=main.css.map */
