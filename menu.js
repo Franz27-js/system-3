@@ -13,7 +13,13 @@ function set_menu_events() {
 function menu_click() {
   let link = this;
   let link_name = link.innerText;
-  console.log(link_name);
+  let menu_links = document.querySelectorAll('.menu_link');
+
+  menu_links.forEach(link => {
+    link.classList.remove('menu_link_active');
+  });
+
+  link.classList.add('menu_link_active');
 }
 
 document.addEventListener('DOMContentLoaded', menu_controller());
