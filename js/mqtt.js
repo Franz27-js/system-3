@@ -2,7 +2,7 @@
 // <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 
 // Connect to an MQTT broker
-const client = mqtt.connect('ws://broker.example.com:8083/mqtt')
+const client = mqtt.connect('10.100.20.178:27017/mqtt')
 
 // Handle connection events
 client.on('connect', function() {

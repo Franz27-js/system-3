@@ -20,6 +20,7 @@ function menu_click() {
   });
 
   link.classList.add('menu_link_active');
+  document.querySelector('.menu_title').innerText = link_name;
 }
 
 document.addEventListener('DOMContentLoaded', menu_controller());

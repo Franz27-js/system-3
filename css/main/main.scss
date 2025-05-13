@@ -31,7 +31,6 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        cursor: pointer;
 
         .menu_inner_container {
           display: flex;
@@ -54,6 +53,7 @@ html {
             display: flex;
             align-items: center;
             gap: 15px;
+            cursor: pointer;
 
             .menu_link_icon {
               height: 25px;
