@@ -29,6 +29,10 @@ $accent_color_2: #F6B17A;
           color: $accent_color_1;
           background-color: $middle_color_1;
         }
+
+        select {
+          color: $light_color_1;
+        }
       }
 
       .menu_link_active {
@@ -66,6 +70,10 @@ $accent_color_2: #F6B17A;
         &:hover {
           color: $accent_color_2;
           background-color: $middle_color_2;
+        }
+
+        select {
+          color: $light_color_2;
         }
       }
 

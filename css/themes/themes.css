@@ -14,6 +14,9 @@
   color: #F6B17A;
   background-color: #2d3541;
 }
+.dark_theme_1 .menu_container .menu_inner_container .menu_link select {
+  color: #EEEEEE;
+}
 .dark_theme_1 .menu_container .menu_inner_container .menu_link_active {
   background-color: #2d3541;
   color: #F6B17A;
@@ -40,6 +43,9 @@
 .dark_theme_2 .menu_container .menu_inner_container .menu_link:hover {
   color: #F6B17A;
   background-color: #535C91;
+}
+.dark_theme_2 .menu_container .menu_inner_container .menu_link select {
+  color: #9290C3;
 }
 .dark_theme_2 .menu_container .menu_inner_container .menu_link_active {
   background-color: #535C91;
