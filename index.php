@@ -26,16 +26,15 @@ $connectionSettings = (new ConnectionSettings)
 
 // $mqtt->loop(true);
 
-
 ?>
 
-      <div class="content_column">
-        <div id="test_publish" class="inner_content_container inner_content_75"></div>
-        <div class="inner_content_container inner_content_25"></div>
-      </div>
-      <div class="content_column">
-        <div class="inner_content_container"></div>
-      </div>
+  <div class="content_column">
+    <div id="test_publish" class="inner_content_container inner_content_75"></div>
+    <div class="inner_content_container inner_content_25"></div>
+  </div>
+  <div class="content_column">
+    <div class="inner_content_container"></div>
+  </div>
   
 <?php
 
