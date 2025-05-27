@@ -49,6 +49,46 @@ $accent_color_2: #F6B17A;
   .content_container {
     .inner_content_container {
       background-color: $dark_color_1;
+
+      .inner_content_heading {
+        color: $light_color_1;
+      }
+
+      .upload_container {
+        .colors_container {
+          border: 2px dashed $very_dark_color_1;
+          color: $very_dark_color_1;
+
+          .color_circle {
+            border: 2px solid $very_dark_color_1;
+          }
+
+          .color_circle_blue {
+            background-color: #1e1c8a;
+          }
+
+          .color_circle_red {
+            background-color: #8a1c1c;
+          }
+
+          .color_circle_green {
+            background-color: #1c8a25;
+          }
+
+          .color_circle_yellow {
+            background-color: #7f8a1c;
+          }
+        }
+
+        .__selected_color__ {
+          border: 2px solid $accent_color_1;
+          color: $accent_color_1;
+
+          .color_circle {
+            border: 2px solid $accent_color_1;
+          }
+        }
+      }
     }
   }
 }

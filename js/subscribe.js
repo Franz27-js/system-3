@@ -4,17 +4,14 @@ function loadMessages() {
   xhr.open('GET', './mqtt_status.json?_=' + new Date().getTime(), true);
   xhr.responseType = 'json';
 
-  let messages_container = document.getElementById('test_upload');
-
   xhr.onload = function () {
     console.log('Response status:', xhr.status);
     if (xhr.status === 200 && xhr.response) {
       const data = xhr.response;
       
       if (data.messages && data.messages.length > 0) {
-        messages_container.innerHTML = data.messages[0]['message'];
-      } else {
-        messagesDiv.innerHTML = '<div class="message">No messages received yet.</div>';
+        let color = data.messages[0]['message'];
+        update_color(color);
       }
     } else {
       // document.getElementById('serviceStatus').textContent = 'Status file not found';
@@ -23,6 +20,16 @@ function loadMessages() {
   };
 
   xhr.send();
+}
+
+function update_color(color) {
+  let colors_container = Array.from(document.querySelectorAll('.colors_container'));
+  
+  colors_container.forEach(container => {
+    container.classList.remove('__selected_color__');
+  });
+
+  document.getElementById('color_' + color).classList.add('__selected_color__');
 }
 
 document.addEventListener('DOMContentLoaded', function () {

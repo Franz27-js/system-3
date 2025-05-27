@@ -116,4 +116,38 @@ html body .main_container .content_container .content_column .inner_content_50 {
 }
 html body .main_container .content_container .content_column .inner_content_75 {
   width: 75%;
+}
+html body .main_container .content_container .content_column .inner_content_heading {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  margin-top: 12.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+html body .main_container .content_container .content_column .upload_container {
+  height: 85%;
+  width: 100%;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 25px;
+}
+html body .main_container .content_container .content_column .upload_container .colors_container {
+  height: 100%;
+  width: 100%;
+  padding: 25px 25px 25px 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+html body .main_container .content_container .content_column .upload_container .colors_container .color_circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
 }/*# sourceMappingURL=main.css.map */

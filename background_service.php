@@ -77,7 +77,7 @@ function run_mqtt_client() {
     $mqtt->connect();
     log_message("Connected successfully");
     
-    $topic = 'mein/beispiel/topic'; // Change to your desired topic
+    $topic = 'color'; // Change to your desired topic
     log_message("Subscribing to topic: $topic");
     
     $mqtt->subscribe($topic, function ($topic, $message) {
