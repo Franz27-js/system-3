@@ -22,24 +22,24 @@
 // }
 
 
-console.log('Starting MQTT client...');
-const client = mqtt.connect('mqtt://10.100.20.181:9001', {
-  username: '',
-  password: '',
-})
+// console.log('Starting MQTT client...');
+// const client = mqtt.connect('mqtt://10.100.20.181:9001', {
+//   username: '',
+//   password: '',
+// })
 
-const topic = 'mein/beispiel/topic';
+// const topic = 'mein/beispiel/topic';
 
-client.on('connect', () => {
-  console.log('Connected to broker');
+// client.on('connect', () => {
+//   console.log('Connected to broker');
 
-  client.subscribe(topic, (err) => {
-    if (!err) {
-      console.log(`Subscribed to ${topic}`)
-    }
-  })
-});
+//   client.subscribe(topic, (err) => {
+//     if (!err) {
+//       console.log(`Subscribed to ${topic}`)
+//     }
+//   })
+// });
 
-client.on('message', (topic, message) => {
-  console.log(`Received message on ${topic}: ${message.toString()}`)
-});
+// client.on('message', (topic, message) => {
+//   console.log(`Received message on ${topic}: ${message.toString()}`)
+// });
