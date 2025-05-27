@@ -56,6 +56,17 @@
 .dark_theme_1 .content_container .inner_content_container .upload_container .__selected_color__ .color_circle {
   border: 2px solid #F6B17A;
 }
+.dark_theme_1 .content_container .inner_content_container .sensor_values_table_container .sensor_table_row .sensor_table_heading {
+  color: #EEEEEE;
+}
+.dark_theme_1 .content_container .inner_content_container .sensor_values_table_container .sensor_table_row .sensor_table_cell {
+  color: #EEEEEE;
+  border-left: 2px dashed #222831;
+}
+.dark_theme_1 .content_container .inner_content_container .sensor_values_table_container .sensor_table_row .middle_row {
+  border-top: 2px dashed #222831;
+  border-bottom: 2px dashed #222831;
+}
 
 .dark_theme_2 {
   background-color: #070F2B;

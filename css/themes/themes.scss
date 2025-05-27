@@ -89,6 +89,24 @@ $accent_color_2: #F6B17A;
           }
         }
       }
+
+      .sensor_values_table_container {
+        .sensor_table_row {
+          .sensor_table_heading {
+            color: $light_color_1;
+          }
+
+          .sensor_table_cell {
+            color: $light_color_1;
+            border-left: 2px dashed $very_dark_color_1;
+          }
+
+          .middle_row {
+            border-top: 2px dashed $very_dark_color_1;
+            border-bottom: 2px dashed $very_dark_color_1;
+          }
+        }
+      }
     }
   }
 }

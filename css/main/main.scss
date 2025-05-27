@@ -169,6 +169,37 @@ html {
               }
             }
           }
+
+          .sensor_values_table_container {
+            height: 85%;
+            width: 100%;
+            padding: 25px;
+
+            .sensor_table_row {
+              height: 33%;
+              width: 100%;
+              display: flex;
+            }
+
+            .sensor_table_heading {
+              height: 100%;
+              width: 20%;
+              padding-left: 25px;
+              font-weight: 700;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+            }
+
+            .sensor_table_cell {
+              height: 100%;
+              width: 20%;
+              padding-left: 25px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+            }
+          }
         }
       }
     }
