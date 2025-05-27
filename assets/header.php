@@ -18,7 +18,7 @@
     <div class="menu_container">
       <div class="menu_inner_container">
         <div class="menu_title">Dashboard</div>
-        <a href="." class="menu_link menu_link_active">
+        <a href="." class="menu_link <? if($page_title === 'Dashboard') { echo 'menu_link_active'; } ?>">
           <svg xmlns="http://www.w3.org/2000/svg" class="menu_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
           Dashboard
         </a>
@@ -26,7 +26,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="menu_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-app-window-mac-icon lucide-app-window-mac"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/></svg>
           Start Service
         </a>
-        <a href="./data.php" class="menu_link">
+        <a href="./data.php" class="menu_link <? if($page_title === 'Data') { echo 'menu_link_active'; } ?>">
           <svg xmlns="http://www.w3.org/2000/svg" class="menu_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-spline-icon lucide-chart-spline"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7"/></svg>
           Data
         </a>
