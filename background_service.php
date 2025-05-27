@@ -2,8 +2,8 @@
 require __DIR__ . '/vendor/autoload.php';
 use PhpMqtt\Client\MqttClient;
 
-// Set a longer execution time (5 minutes)
-set_time_limit(300);
+// Set a longer execution time (15 minutes)
+set_time_limit(900);
 
 // Create a file for logging
 $logFile = __DIR__ . '/mqtt_log.log';
