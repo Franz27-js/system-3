@@ -77,14 +77,28 @@ function run_mqtt_client() {
     $mqtt->connect();
     log_message("Connected successfully");
     
-    $topic = 'color'; // Change to your desired topic
-    log_message("Subscribing to topic: $topic");
-    
-    $mqtt->subscribe($topic, function ($topic, $message) {
+    // Define topics to subscribe to
+    $topics = [
+      'color'
+    ];
+
+    $topic = 'color';
+    $mqtt->subscribe($topic, function ($receivedTopic, $message) {
+      // log_message("Received message on topic [$]: $message");
       log_message("Received message on topic [$topic]: $message");
       add_message($topic, $message);
     }, 0);
+    // foreach ($topics as $topic) {
+    //   log_message("Subscribing to topic: $topic");
+      
+    //   $mqtt->subscribe($topic, function ($receivedTopic, $message) {
+    //     // log_message("Received message on topic [$]: $message");
+    //     log_message("Received message on topic [$topic]: $message");
+    //     add_message($topic, $message);
+    //   }, 0);
+    // }
     
+    log_message("Subscribed to " . count($topics) . " topics successfully");
     log_message("Starting message loop");
     
     // Keep the client running until interrupted

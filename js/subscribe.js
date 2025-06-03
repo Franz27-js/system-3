@@ -11,6 +11,8 @@ function loadMessages() {
       
       if (data.messages && data.messages.length > 0) {
         let color = data.messages[0]['message'];
+        console.log(color);
+        
         update_color(color);
       }
     } else {

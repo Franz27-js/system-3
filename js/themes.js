@@ -42,4 +42,4 @@ function set_theme(theme) {
   global_themes_container.classList.add(theme);
 }
 
-document.addEventListener('DOMContentLoaded', themes_controller());
+// document.addEventListener('DOMContentLoaded', themes_controller());
