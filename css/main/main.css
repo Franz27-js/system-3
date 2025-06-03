@@ -136,11 +136,13 @@ html body .main_container .content_container .content_column .pricing_container 
   gap: 12.5px;
 }
 html body .main_container .content_container .content_column .pricing_container .pricing_content {
-  font-size: 20px;
+  font-size: 15px;
 }
 html body .main_container .content_container .content_column .pricing_container .data_price_container {
-  margin-top: 25px;
-  font-size: 25px;
+  font-size: 22px;
+}
+html body .main_container .content_container .content_column .pricing_container .data_date_container {
+  margin-bottom: 25px;
 }
 html body .main_container .content_container .content_column .upload_container {
   height: 85%;
