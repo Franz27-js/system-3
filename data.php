@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+$_SESSION['page_title'] = 'Data';
+
 include_once 'assets/header.php';
 
 ?>

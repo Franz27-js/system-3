@@ -1,3 +1,9 @@
+<?php
+
+$page_title = $_SESSION['page_title'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,23 +16,24 @@
   <!-- custom css -->
   <link rel="stylesheet" href="css/themes/themes.css">
   <link rel="stylesheet" href="css/main/main.css">
-  <title>System 3</title>
+  <title><?=$page_title?></title>
 </head>
 <body>
 
   <div class="main_container dark_theme_1">
     <div class="menu_container">
       <div class="menu_inner_container">
-        <div class="menu_title">Dashboard</div>
-        <a href="." class="menu_link <? if($page_title === 'Dashboard') { echo 'menu_link_active'; } ?>">
-          <svg xmlns="http://www.w3.org/2000/svg" class="menu_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
-          Dashboard
-        </a>
+        <div class="menu_title"><?=$page_title?></div>
         <a href="./activate_background_service.php" class="menu_link">
           <svg xmlns="http://www.w3.org/2000/svg" class="menu_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-app-window-mac-icon lucide-app-window-mac"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/></svg>
           Start Service
         </a>
-        <a href="./data.php" class="menu_link <? if($page_title === 'Data') { echo 'menu_link_active'; } ?>">
+        <a href="." class="menu_link <?= $page_title == 'Dobot' ? 'menu_link_active' : '' ?>">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="menu_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg> -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu_link_icon"width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot-icon lucide-bot"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          Dobot
+        </a>
+        <a href="./data.php" class="menu_link <?= $page_title == 'Data' ? 'menu_link_active' : '' ?>">
           <svg xmlns="http://www.w3.org/2000/svg" class="menu_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-spline-icon lucide-chart-spline"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7"/></svg>
           Data
         </a>
