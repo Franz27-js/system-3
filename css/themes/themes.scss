@@ -54,6 +54,12 @@ $accent_color_2: #F6B17A;
         color: $light_color_1;
       }
 
+      .pricing_container {
+        .pricing_content {
+          color: $light_color_1;
+        }
+      }
+
       .upload_container {
         .colors_container {
           border: 2px dashed $very_dark_color_1;

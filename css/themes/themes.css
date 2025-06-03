@@ -30,6 +30,9 @@
 .dark_theme_1 .content_container .inner_content_container .inner_content_heading {
   color: #EEEEEE;
 }
+.dark_theme_1 .content_container .inner_content_container .pricing_container .pricing_content {
+  color: #EEEEEE;
+}
 .dark_theme_1 .content_container .inner_content_container .upload_container .colors_container {
   border: 2px dashed #222831;
   color: #222831;

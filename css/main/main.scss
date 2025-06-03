@@ -143,6 +143,24 @@ html {
             font-size: 25px;
           }
 
+          .pricing_container {
+            height: 85%;
+            width: 100%;
+            padding: 0 75px;
+            display: flex;
+            flex-direction: column;
+            gap: 12.5px;
+
+            .pricing_content {
+              font-size: 20px;
+            }
+
+            .data_price_container {
+              margin-top: 25px;
+              font-size: 25px;
+            }
+          }
+
           .upload_container {
             height: 85%;
             width: 100%;
