@@ -36,7 +36,7 @@ function log_message($message) {
 }
 
 function add_message($topic, $message) {
-  $statusFile = __DIR__ . '/mqtt_status.json';
+  $statusFile = __DIR__ . '/mqtt_status_'.$topic.'.json';
   $status = [];
   
   if (file_exists($statusFile)) {
@@ -79,27 +79,30 @@ function run_mqtt_client() {
     
     // Define topics to subscribe to
     $topics = [
-      'color'
+      'color',
+      'example_1'
     ];
 
-    $topic = 'color';
-    $mqtt->subscribe($topic, function ($receivedTopic, $message) {
-      // log_message("Received message on topic [$]: $message");
-      log_message("Received message on topic [$topic]: $message");
-      add_message($topic, $message);
-    }, 0);
-    // foreach ($topics as $topic) {
-    //   log_message("Subscribing to topic: $topic");
+    //* if only one topic is required 
+    // $topic = 'color';
+    // $mqtt->subscribe($topic, function ($recieved_topic, $message) {
+    //   // log_message("Received message on topic [$]: $message");
+    //   log_message('Received message in run_mqtt_client on topic ['.$recieved_topic.']: '.$message);
+    //   add_message($recieved_topic, $message);
+    // }, 0);
+
+    //* if multiple topics are required 
+    foreach ($topics as $topic) {
+      log_message("Subscribing to topic: $topic");
       
-    //   $mqtt->subscribe($topic, function ($receivedTopic, $message) {
-    //     // log_message("Received message on topic [$]: $message");
-    //     log_message("Received message on topic [$topic]: $message");
-    //     add_message($topic, $message);
-    //   }, 0);
-    // }
+      $mqtt->subscribe($topic, function ($recieved_topic, $message) {
+        log_message("Received message on topic [$recieved_topic]: $message");
+        add_message($recieved_topic, $message);
+      }, 0);
+    }
     
-    log_message("Subscribed to " . count($topics) . " topics successfully");
-    log_message("Starting message loop");
+    log_message('Subscribed to '.count($topics).' topics successfully');
+    log_message('Starting message loop');
     
     // Keep the client running until interrupted
     $startTime = time();

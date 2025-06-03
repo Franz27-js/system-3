@@ -1,7 +1,7 @@
 // Function to load messages from the status file
-function loadMessages() {
+function load_colors() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', './mqtt_status.json?_=' + new Date().getTime(), true);
+  xhr.open('GET', './mqtt_status_color.json?_=' + new Date().getTime(), true);
   xhr.responseType = 'json';
 
   xhr.onload = function () {
@@ -11,7 +11,7 @@ function loadMessages() {
       
       if (data.messages && data.messages.length > 0) {
         let color = data.messages[0]['message'];
-        console.log(color);
+        console.log('Recieved color: ' + color);
         
         update_color(color);
       }
@@ -36,8 +36,8 @@ function update_color(color) {
 
 document.addEventListener('DOMContentLoaded', function () {
   // Initial load
-  loadMessages();
+  load_colors();
   
   // Auto refresh every 5 seconds
-  setInterval(loadMessages, 5000);
+  setInterval(load_colors, 5000);
 });
