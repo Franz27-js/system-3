@@ -79,8 +79,9 @@ function run_mqtt_client() {
     
     // Define topics to subscribe to
     $topics = [
-      'color',
-      'example_1'
+      'farbe',
+      'feuchtigkeit',
+      'temperatur'
     ];
 
     //* if only one topic is required 
