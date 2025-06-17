@@ -1,7 +1,6 @@
 {
     "require": {
-        "php-mqtt/client": "^2.2",
-        "jenssegers/mongodb": "^2.3"
+        "php-mqtt/client": "^2.2"
     },
     "config": {
         "allow-plugins": {
