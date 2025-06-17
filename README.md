@@ -29,7 +29,7 @@ Ebenfalls werden auf der Seite die zuletzt gescante Farbe angezeigt.
 Auf der Seite sind die aktuellen Stromkosten für den Dobot angezeigt, der beste Preis für MW/H und der Preis für KW/H.
 Ebenso werden der beste MW/H und KW/H Preis für diesen und nächsten Tag berechnet.
 
-Auf dem unteren Teil der Seite werden die Daten von den Sensoren angezeigt.
+Im unteren Bereich der Seite werden die Daten von den Sensoren angezeigt.
 
 ## Allgemeine Beschreibung
 Die zuletzt gescannte Farbe erhält das Frontend (System-3 - S3) von der MQTT-Subscribtion. Aufgrund von begrenzter Zeit sollten die Sensorendaten zunächst ebenfalls über MQTT erhalten werden. Dazu gibt es jeweils ein Topic ("farbe", "feuchtigkeit", "temperatur"), die unabhängig voneinander funktionieren. Der Dobot im Java-Backend wird über das Simple Object Access Protocol (SOAP) gesteuert. 
