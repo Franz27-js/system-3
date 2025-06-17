@@ -5,9 +5,13 @@ function load_colors() {
   xhr.responseType = 'json';
 
   xhr.onload = function () {
+    let status_indicator = document.querySelector('.__user_identifier__');
+
     console.log('Response status:', xhr.status);
     if (xhr.status === 200 && xhr.response) {
       const data = xhr.response;
+
+      status_indicator.style.backgroundColor = '#57a32b';
       
       if (data.messages && data.messages.length > 0) {
         let color = data.messages[0]['message'];
@@ -16,6 +20,7 @@ function load_colors() {
         update_color(color);
       }
     } else {
+      status_indicator.style.backgroundColor = '#8a1c1c';
       // document.getElementById('serviceStatus').textContent = 'Status file not found';
       // document.getElementById('messages').innerHTML = '<div class="message">Unable to load messages.</div>';
     }
