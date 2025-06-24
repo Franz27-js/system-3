@@ -1,44 +1,34 @@
 <?php
 // Basic PHP SOAP Client Example
 
-try {
-    // Define SOAP service parameters
-    $wsdl = 'http://example.com/service?wsdl'; // Replace with actual WSDL URL
-    $options = [
-        'cache_wsdl' => WSDL_CACHE_NONE,     // Disable WSDL cache during development
-        'trace' => 1,                        // Enable trace to get request/response details
-        'exceptions' => true                 // Enable exceptions
-    ];
-    
-    // Create the SOAP client
-    $client = new SoapClient($wsdl, $options);
-    
-    // Optional: Set HTTP authentication if needed
-    // $client->__setHttpHeader(['Authorization: Basic ' . base64_encode("username:password")]);
-    
-    // Prepare parameters for the SOAP function call
-    $params = [
-        'param1' => 'value1',
-        'param2' => 'value2'
-    ];
-    
-    // Make the SOAP request
-    $response = $client->functionName($params); // Replace 'functionName' with actual function
-    
-    // Process the response
-    echo "Response:\n";
-    print_r($response);
-    
-    // Optional: Debug information
-    echo "\nRequest Headers:\n" . $client->__getLastRequestHeaders();
-    echo "\nRequest XML:\n" . $client->__getLastRequest();
-    echo "\nResponse Headers:\n" . $client->__getLastResponseHeaders();
-    echo "\nResponse XML:\n" . $client->__getLastResponse();
-    
-} catch (SoapFault $fault) {
-    // Handle SOAP faults/exceptions
-    echo "SOAP Fault: " . $fault->faultcode . " - " . $fault->getMessage();
-} catch (Exception $e) {
-    // Handle other exceptions
-    echo "Error: " . $e->getMessage();
-}
+$post_data = $_POST['dobot_button'] ?? 'no_data_received';
+
+// Minimal test with the exact SOAP format DOBOT expects
+$soapRequest = '<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:daf="http://DaFraDa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <daf:StartDobotProgram/>
+   </soapenv:Body>
+</soapenv:Envelope>';
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'http://10.62.2.202:8080/DOBOT_WS/Main?wsdl');
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $soapRequest);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-Type: text/xml; charset=UTF-8',
+    'SOAPAction: ""',
+    'Content-Length: ' . strlen($soapRequest)
+));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($ch);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+echo "HTTP Code: $httpCode\n";
+echo "Response: $response\n";
+
+curl_close($ch);
+
+header('Location: .');

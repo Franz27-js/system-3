@@ -85,7 +85,7 @@ html body .main_container .menu_container .menu_inner_container .profile_contain
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #57a32b;
+  background-color: #F6B17A;
   position: absolute;
   right: 0;
   bottom: 5px;
@@ -126,6 +126,24 @@ html body .main_container .content_container .content_column .inner_content_head
   justify-content: center;
   align-items: center;
   font-size: 25px;
+}
+html body .main_container .content_container .content_column .dobot_buttons_container {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+html body .main_container .content_container .content_column .dobot_buttons_container .dobot_control_button {
+  height: 50px;
+  width: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 html body .main_container .content_container .content_column .pricing_container {
   height: 85%;

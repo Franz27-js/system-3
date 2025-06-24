@@ -143,6 +143,26 @@ html {
             font-size: 25px;
           }
 
+          .dobot_buttons_container {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+
+            .dobot_control_button {
+              height: 50px;
+              width: 50%;
+              font-size: 20px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 25px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
+          }
+
           .pricing_container {
             height: 85%;
             width: 100%;

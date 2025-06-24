@@ -30,6 +30,15 @@
 .dark_theme_1 .content_container .inner_content_container .inner_content_heading {
   color: #EEEEEE;
 }
+.dark_theme_1 .content_container .inner_content_container .dobot_buttons_container .dobot_control_button {
+  background-color: #222831;
+  color: #EEEEEE;
+  border: 2px solid #EEEEEE;
+}
+.dark_theme_1 .content_container .inner_content_container .dobot_buttons_container .dobot_control_button:hover {
+  color: #F6B17A;
+  border-color: #F6B17A;
+}
 .dark_theme_1 .content_container .inner_content_container .pricing_container .pricing_content {
   color: #EEEEEE;
 }

@@ -1,2 +1,2 @@
 /mqtt_log.log
-/mqtt_status_*.json
+/mqtt_status*.json

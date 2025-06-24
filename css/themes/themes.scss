@@ -54,6 +54,19 @@ $accent_color_2: #F6B17A;
         color: $light_color_1;
       }
 
+      .dobot_buttons_container {
+        .dobot_control_button {
+          background-color: $very_dark_color_1;
+          color: $light_color_1;
+          border: 2px solid $light_color_1;
+        }
+
+        .dobot_control_button:hover {
+          color: $accent_color_1;
+          border-color: $accent_color_1;
+        }
+      }
+
       .pricing_container {
         .pricing_content {
           color: $light_color_1;
