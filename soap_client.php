@@ -3,32 +3,35 @@
 
 $post_data = $_POST['dobot_button'] ?? '';
 
-// Minimal test with the exact SOAP format DOBOT expects
-$soapRequest = '<?xml version="1.0" encoding="UTF-8"?>
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:daf="http://DaFraDa/">
-  <soapenv:Header/>
-  <soapenv:Body>
-  <daf:'.$post_data.'/>
-  </soapenv:Body>
-</soapenv:Envelope>';
+function dobot($post_data): void {
+  // Minimal test with the exact SOAP format DOBOT expects
+  $soapRequest = '<?xml version="1.0" encoding="UTF-8"?>
+  <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:daf="http://DaFraDa/">
+    <soapenv:Header/>
+    <soapenv:Body>
+    <daf:'.$post_data.'/>
+    </soapenv:Body>
+  </soapenv:Envelope>';
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'http://10.62.0.158:8080/DOBOT_WS/Main?wsdl');
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $soapRequest);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  'Content-Type: text/xml; charset=UTF-8',
-  'SOAPAction: ""',
-  'Content-Length: ' . strlen($soapRequest)
-));
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, 'http://10.62.0.158:8080/DOBOT_WS/Main?wsdl');
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $soapRequest);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-Type: text/xml; charset=UTF-8',
+    'SOAPAction: ""',
+    'Content-Length: ' . strlen($soapRequest)
+  ));
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-$response = curl_exec($ch);
-$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  $response = curl_exec($ch);
+  $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-echo "HTTP Code: $httpCode\n";
-echo "Response: $response\n";
+  echo "HTTP Code: $httpCode\n";
+  echo "Response: $response\n";
 
-curl_close($ch);
+  curl_close($ch);
+}
 
+dobot($post_data);
 header('Location: .');
