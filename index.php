@@ -31,9 +31,9 @@ include_once 'assets/header.php';
     </div>
     <form action="soap_client.php" method="POST"  class="inner_content_container inner_content_50">
       <div class="dobot_buttons_container">
-        <button type="submit" name="dobot_button" value="start_dobot" class="dobot_control_button">Dobot starten</button>
+        <button type="submit"  name="dobot_button" value="Homing" class="dobot_control_button">Homing</button>
+        <button type="submit" name="dobot_button" value="StartDobotProgram" class="dobot_control_button">Dobot starten</button>
         <div name="dobot_button" value="get_color" class="dobot_control_button">Farbe identifizieren</div>
-        <div name="dobot_button" value="end_dobot" class="dobot_control_button">Dobot stopen</div>
       </div>
     </form>
   </div>
