@@ -29,7 +29,7 @@ $next_date = date('d-m-Y H:i', $next_starting_time);
       <div class="pricing_content data_price_container">Best Price MW/H: <?=$best_price?>€</div>
       <div class="pricing_content data_price_container">Price KW/H: <?=$best_price/1000?>€</div>
       <div class="pricing_content data_date_container"><?=$best_date?></div>
-      <div class="pricing_content data_price_container">Next Price  MW/H: <?=$next_price?>€</div>
+      <div class="pricing_content data_price_container">Next best Price  MW/H: <?=$next_price?>€</div>
       <div class="pricing_content data_price_container">Price KW/H: <?=$next_price/1000?>€</div>
       <div class="pricing_content data_date_container"><?=$next_date?></div>
     </div>
