@@ -6,10 +6,10 @@ $post_data = $_POST['dobot_button'] ?? '';
 // Minimal test with the exact SOAP format DOBOT expects
 $soapRequest = '<?xml version="1.0" encoding="UTF-8"?>
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:daf="http://DaFraDa/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <daf:'.$post_data.'/>
-   </soapenv:Body>
+  <soapenv:Header/>
+  <soapenv:Body>
+  <daf:'.$post_data.'/>
+  </soapenv:Body>
 </soapenv:Envelope>';
 
 $ch = curl_init();
@@ -17,9 +17,9 @@ curl_setopt($ch, CURLOPT_URL, 'http://10.62.0.158:8080/DOBOT_WS/Main?wsdl');
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $soapRequest);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Content-Type: text/xml; charset=UTF-8',
-    'SOAPAction: ""',
-    'Content-Length: ' . strlen($soapRequest)
+  'Content-Type: text/xml; charset=UTF-8',
+  'SOAPAction: ""',
+  'Content-Length: ' . strlen($soapRequest)
 ));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
